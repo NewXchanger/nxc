@@ -7,7 +7,7 @@ Fonctionnalité: Réaliser un échange simple
 Scénario: Echange simple JE VEUX visualisation pour un utilisateur
   Soit un utilisateur
   Quand il va sur échange simple
-  Et qu'il recherche un iPhone sur Je veux
+  Et qu'il recherche un iPhone sur JE VEUX
   Alors il doit voir tous les produits appartenant aux utilisateurs possédant un iPhone
 
 Scénario: Echange simple J'AI visualisation pour un utilisateur
