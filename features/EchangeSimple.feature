@@ -4,19 +4,19 @@ Fonctionnalité: Réaliser un échange simple
   En tant qu'utilisateur
   Je peux faire des propositions d'échange simple
  
-Scénario: Echange simple JE VEUX visualisation pour un utilisateur
+Scénario : Echange simple JE VEUX visualisation pour un utilisateur
   Soit un utilisateur
   Quand il va sur échange simple
   Et qu'il recherche un iphone sur Je veux
   Alors il doit voir tous les produits appartenant aux utilisateurs possédant un iPhone
 
-Scénario: Echange simple J'AI visualisation pour un utilisateur
+Scénario : Echange simple J'AI visualisation pour un utilisateur
   Soit un utilisateur
   Quand il va sur échange simple
   Et qu'il recherche un iphone sur J'AI
   Alors il doit voir tous les produits appartenant aux utilisateurs qui recherchent un iPhone
 
-Scénario: Echange simple Selection
+Scénario : Echange simple Selection
   Soit un utilisateur sur la page des résultats
   Quand il clic sur un produit
   Alors la fiche du produit s'affiche
