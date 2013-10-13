@@ -22,51 +22,51 @@ Scénario: Echange simple Selection
   Alors la fiche du produit s'affiche
  	
 Scénario: Echange simple Proposition non enregistré
- 	Soit un utilisateur non enregistré sur la fiche produit
- 	Quand il clic sur proposition
- 	Alors il doit voir la page d'inscription
- 	Quand il s'inscrit sur NXC
- 	Alors la page de proposition s'affiche
+  Soit un utilisateur non enregistré sur la fiche produit
+  Quand il clic sur proposition
+  Alors il doit voir la page d'inscription
+  Quand il s'inscrit sur NXC
+  Alors la page de proposition s'affiche
  	
 Scénario: Echange simple Proposition enregistré
- 	Soit un utilisateur enregistré sur la fiche produit
- 	Quand il clic sur proposition
- 	Alors la page de proposition s'affiche
+  Soit un utilisateur enregistré sur la fiche produit
+  Quand il clic sur proposition
+  Alors la page de proposition s'affiche
  	
 Scénario: Echange simple ajout de produit
- 	Soit un utilisateur enregistré sur la page de proposition
- 	Quand il clic sur ajouter un produit
- 	Alors la page de création de fiche produit s'affiche
+  Soit un utilisateur enregistré sur la page de proposition
+  Quand il clic sur ajouter un produit
+  Alors la page de création de fiche produit s'affiche
  	
 Scénario: Echange simple envoi Proposition
- 	Soit un utilisateur sur la page de proposition ayant ajouté au moins un produit
- 	Quand il fait une proposition
- 	Alors l'autre utilisateur concerné reçoit un email
- 	Et le produit apparait dans son tableau de bord
+  Soit un utilisateur sur la page de proposition ayant ajouté au moins un produit
+  Quand il fait une proposition
+  Alors l'autre utilisateur concerné reçoit un email
+  Et le produit apparait dans son tableau de bord
  	
 Scénario: Echange simple Notification
- 	Soit un utilisateur enregistré ayant reçu une proposition
- 	Quand il se rend sur le site
- 	Alors il a une notification le renvoyant sur son tableau de bord
+  Soit un utilisateur enregistré ayant reçu une proposition
+  Quand il se rend sur le site
+  Alors il a une notification le renvoyant sur son tableau de bord
  	
 Scénario: Echange simple Réponse
- 	Soit un utilisateur enregistré ayant reçu une proposition
- 	Quand il se rend sur son tableau de bord
- 	Alors il peut voir la proposition
- 	Et la refuser ou l'accepter
+  Soit un utilisateur enregistré ayant reçu une proposition
+  Quand il se rend sur son tableau de bord
+  Alors il peut voir la proposition
+  Et la refuser ou l'accepter
  	
 Scénario: Echange simple Réponse accepter
- 	Soit un utilisateur enregistré visualisant une proposition
- 	Quand il clic sur accepté
- 	Alors l'autre utilisateur reçoit une notification de réussite
- 	Et toutes les propositions relatives aux produits en jeu autres que celle dont il est question sont perdues
+  Soit un utilisateur enregistré visualisant une proposition
+  Quand il clic sur accepté
+  Alors l'autre utilisateur reçoit une notification de réussite
+  Et toutes les propositions relatives aux produits en jeu autres que celle dont il est question sont perdues
  	
 Scénario: Echange simple Réponse refuser
- 	Soit un utilisateur enregistré visualisant une proposition
- 	Quand il clic sur refuser
- 	Alors le site lui propose de faire une contre-proposition
+  Soit un utilisateur enregistré visualisant une proposition
+  Quand il clic sur refuser
+  Alors le site lui propose de faire une contre-proposition
  	
 Scénario: Echange simple Réponse refuser definitivement
- 	Soit un utilisateur enregistré visualisation une proposition et refusant une contre-proposition
- 	Quand il clic sur refuser definitivement
- 	Alors le statut de la proposition est perdue
+  Soit un utilisateur enregistré visualisation une proposition et refusant une contre-proposition
+  Quand il clic sur refuser definitivement
+  Alors le statut de la proposition est perdue
