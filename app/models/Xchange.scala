@@ -3,6 +3,9 @@ package models
 import org.joda.time.DateTime
 import reactivemongo.bson._
 import reactivemongo.bson.BSONDateTime
+import play.api.libs.json.Json
+
+import models.Formats._
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,7 +25,7 @@ case class Xchange(
 
 object Xchange {
   implicit object XchangeBSONReader extends BSONDocumentReader[Xchange] {
-    def read(doc: BSONDocument): Product =
+    def read(doc: BSONDocument): Xchange =
       Xchange(
         doc.getAs[BSONObjectID]("_id"),
         doc.getAs[String]("name").get,
@@ -41,4 +44,6 @@ object Xchange {
         "offers" -> product.offers,
         "creationDate" -> product.creationDate.map(date => BSONDateTime(date.getMillis)))
   }
+
+  implicit val xchangeFormat = Json.format[Xchange]
 }

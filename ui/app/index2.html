@@ -13,8 +13,12 @@
 
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/bootstrap.css">
-        <link rel="stylesheet" href="styles/mainnew.css">
-        <!-- endbuild -->
+        <link rel="stylesheet" href="styles/home.css">
+      <link rel="stylesheet" href="styles/font-awesome-4.0.3/css/font-awesome.css">
+      <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+      <!-- endbuild -->
 </head>
   <body ng-app="nxc">
     <!--[if lt IE 7]>
@@ -26,29 +30,45 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <nav class="navbar" role="navigation">
-        <div class="social-header">
-            <div class="container">
-                <div class="row">
-                    <!-- social buttons -->
-                    <div class="col-lg-1">
-
-                    </div>
-                </div>
+    <header class="social-header">
+        <div class="container">
+            <div class="pull-right">
+            <div class="pull-left">
+                <!-- social buttons -->
+                <ul>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="pull-left">
+                <ul>
+                    <li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li id="search-form">
+                        <form action="#" method="get">
+                            <input type="text" class="search-text-box">
+                        </form>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="navbar-header">
-            <div class="container">
-                <div class="row">
-                    <!-- logo -->
-                    <div class="col-lg-4">
+        </div>
+    </header>
 
-                    </div>
-                    <!-- menu -->
-                    <div class="col-lg-8">
-
-                    </div>
-                </div>
+    <nav class="navbar navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- logo -->
+                <a class="navbar-brand" href="#"><img src="../images/logo.png"/></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav pull-right navbar-nav">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Echanger</a></li>
+                    <li><a href="#">Connexion</a></li>
+                    <li><button class="nxc-btn navbar-btn">S'inscrire</button></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -58,8 +78,10 @@
 
     <!-- FOOTER -->
     <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <div class="container">
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2013 NewExchange.</p>
+        </div>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

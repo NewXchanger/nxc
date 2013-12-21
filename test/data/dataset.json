@@ -1,0 +1,25 @@
+{
+    "name": "iphone noir 2",
+    "description": "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.",
+    "wants": [  "iPhone 5S" ],
+    "photos": [ "iphoneblack.jpg" ],
+    "pending_offers": [
+        {
+            "date": "12/12/2014 a 12h",
+            "user": "Lorem Ipsum",
+            "points": 300,
+            "object": "Nokia 3310"
+        },
+        {
+            "date": "16/12/2014 a 12h",
+            "user": "Dolorsit amet",
+            "object": "Galaxy SIII"
+        },
+        {
+            "date": "10/12/2014 a 12h",
+            "user": "John Smith",
+            "object": "Galaxy SII",
+            "points": 20
+        }
+    ]
+}
