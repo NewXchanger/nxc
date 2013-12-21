@@ -1,0 +1,48 @@
+<div class="container">
+
+    <div class="col-lg-3">
+
+        <ul class="nav nav-tabs">
+            <li><a href="#iwant" data-toggle="tab">Je recherche</a></li>
+            <li><a href="#ihave" data-toggle="tab">Je possede</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="iwant">
+            </div>
+
+            <div class="tab-pane" id="ihave">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-9" ng-model="products">
+        <!-- Summary ================================================== -->
+        <div class="summary-results">
+            <span>{{products.length}} offres pour "iPhone"</span>
+            <select class="filter-results" ng-model="orderProp">
+                <option value="name">Nom</option>
+                <option value="age">Pertinence</option>
+            </select>
+            <span style="float:right;">Classement par</span>
+        </div>
+
+
+        <!-- Results ================================================== -->
+        <div class="row details" ng-repeat="product in products" ng-click="product_details(product)">
+            <div class="col-lg-2">
+                <img height="120" weight="140" ng-src="../images/{{product.photos[0]}}" />
+            </div>
+            <div class="col-lg-7 result-detail">
+                <h4>{{product.name}}</h4>
+                <p>{{product.description | limitTo:2}}</p>
+            </div>
+            <div class="col-lg-3 result-preferences">
+                Préférences d'échange: {{ product.wants }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/holderjs/holder.js"></script>

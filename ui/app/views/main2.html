@@ -1,0 +1,62 @@
+<!-- Carousel
+================================================== -->
+
+<!-- /.carousel -->
+
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="marketing">
+    <div class="container">
+    <!-- START THE FEATURETTES -->
+
+        <div class="row">
+            <div class="col-lg-7">
+                <h2>Notre concept</h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+
+                <ul class="categories">
+                    <li><img id="echange" class="img-circle" height="50" width="50" src="../images/carroussel-xchange.png" /></li>
+                    <li><img id="roulette" class="img-circle" height="50" width="50" src="../images/carroussel-roulette.png" /></li>
+                    <li><img id="poker" class="img-circle" height="50" width="50" src="../images/carroussel-poker.png" /></li>
+                </ul>
+            </div>
+            <div class="col-lg-5">
+                <img class="featurette-image img-responsive" data-src="holder.js/300x300/auto" alt="Generic placeholder image">
+            </div>
+        </div>
+    <!-- /END THE FEATURETTES -->
+    </div>
+</div><!-- /.container -->
+
+
+<script src="bower_components/holderjs/holder.js"></script>
+<script src="bower_components/roundabout/jquery.roundabout.js"></script>
+<script src="bower_components/carouFredSel/jquery.carouFredSel-6.2.1.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".nxc-carousel").roundabout({
+            btnNext: ".next",
+            btnPrev: ".prev",
+            minScale: 0.1,
+            maxScale: 0.9
+        });
+    });
+
+    $(document).ready(function() {
+        // Using custom configuration
+        $(".last_products").carouFredSel({
+            width: 850,
+            align: "left",
+            direction: "left",
+            items: 5,
+            scroll: 1,
+            next: "#last_products_next"
+        });
+    });
+</script>

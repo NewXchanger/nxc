@@ -1,0 +1,90 @@
+<div class="container">
+    <!-- Summary ================================================== -->
+    <div class="row">
+        <div class="summary-results">
+            <button ng-click="goBack()">Revenir aux resultats</button>
+        </div>
+    </div>
+
+    <div class="row">
+    <!-- Left menu ================================================== -->
+        <div class="col-lg-3 col-user">
+            <div><button class="nxc-button full-button" ng-click="user_details(product)">Contacter</button></div>
+            <div style="margin-top:10px"><img style="margin-left:auto;margin-right:auto" class="placeholder" data-src="holder.js/150x150/auto" alt="Generic placeholder" /></div>
+        </div>
+
+
+        <div class="col-lg-9 grey-light">
+            <!-- Results ================================================== -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="placeholder" data-src="holder.js/255x255/auto" alt="Generic placeholder" />
+                    <div class="row no-pad">
+                        <div class="col-lg-3">
+                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 result-detail">
+                    <h4 class="object-title">{{product.name}}</h4>
+                    <p>{{product.description}}</p>
+                </div>
+            </div>
+
+            <div class="row grey-middle">
+                <!-- Nav tabs -->
+                <div class="col-lg-9">
+                    <ul class="nav nav-tabs">
+                        <li><a href="#received" data-toggle="tab">Offres recues</a></li>
+                        <li><a href="#sent" data-toggle="tab">Offres envoyees</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <button class="nxc-button full-button" style="vertical-align:middle;" ng-click="doOffer()">Faire une offre</button>
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="received">
+                        <!--<div class="row">-->
+                            <div class="col-lg-6" ng-repeat="offer in refused_offers">
+
+                            </div>
+                            <div class="col-lg-6" ng-repeat="offer in product.pending_offers | limitTo:2 | orderBy:date">
+                                <div>
+                                    <div class="entete-offre">Le {{offer.date}} - <strong>{{offer.user}}</strong> souhaite</div>
+                                    <div class="corps-offre">
+                                        <div class="col-lg-3"><img class="placeholder" data-src="holder.js/40x40/auto" style="padding-top:10px;padding-bottom:10px" alt="Generic placeholder" /></div>
+                                        <div class="col-lg-6">{{offer.object}}</div>
+                                        <div class="col-lg-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--</div>-->
+                    </div>
+
+
+                    <div class="tab-pane" id="sent">
+                        <div class="row">
+                            <div class="col-lg-6" ng-repeat="offer in pending_offers">
+                                <p>lol</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="bower_components/holderjs/holder.js"></script>
