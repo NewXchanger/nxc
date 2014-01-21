@@ -1,8 +1,40 @@
 <!-- Carousel
 ================================================== -->
-
-<!-- /.carousel -->
-
+<div id="myCarousel" class="carousel slide nxc-body" data-ride="carousel">
+    <input type="image" src="../images/carousel-arrowleft.png" name="image" class="prev" style="float:left;top:40%;position:absolute;left:15%;"/>
+    <input type="image" src="../images/carousel-arrowright.png" name="image" class="next" style="float:right;top:40%;position:absolute;right:15%;"/>
+    <div class="container">
+        <ul class="nxc-carousel">
+            <li class="xchange-carousel">
+                <div>
+                    <img src="../images/carousel-xchange.png" style="margin-top:3em; height:9.750em;margin-bottom:1em;"/>
+                    <p style="font-size:2.5em;font-weight:lighter;margin-left:1em;margin-right:1em">Echangez en toute simplicité !</p>
+                    <div style="text-align: center;">
+                        <input class="search-input" type=text placeholder="Un article que..." ng-model="myObject" style="display:block; margin-left:auto; margin-right:auto;margin-bottom:1em;height:3.5em;width:20em"/>
+                        <button class="nxc-btn btn-orange" ng-click="iwant()">Je possède</button>
+                        <button class="nxc-btn btn-orange" ng-click="ihave()">Je recherche</button>
+                    </div>
+                </div></li>
+            <li class="roulette-carousel">
+                <div>
+                    <img src="../images/carousel-roulette.png" style="margin-top:4em; height:8em;"/>
+                    <p style="font-size:3.75em;font-weight:lighter;">Get Lucky</p>
+                    <p>Laissez votre chance guider votre recherche...</p>
+                    <button class="nxc-btn btn-orange" ng-click="roll()">Lancer la roulette</button>
+                </div>
+            </li>
+            <li class="poker-carousel">
+                <div>
+                    <img src="../images/carousel-poker.png" style="margin-top:4em; height:8em;"/>
+                    <p style="font-size:3.75em;font-weight:lighter;">Envie de miser ?</p>
+                    <p>Lorem ipsum</p>
+                    <button class="nxc-btn btn-orange" ng-click="roll()">Passer à table...</button>
+                </div>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div><!-- /.carousel -->
 
 
 <!-- Marketing messaging and featurettes
@@ -19,44 +51,226 @@
                 <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                 <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 
-                <ul class="categories">
-                    <li><img id="echange" class="img-circle" height="50" width="50" src="../images/carroussel-xchange.png" /></li>
-                    <li><img id="roulette" class="img-circle" height="50" width="50" src="../images/carroussel-roulette.png" /></li>
-                    <li><img id="poker" class="img-circle" height="50" width="50" src="../images/carroussel-poker.png" /></li>
+                <ul style="display:inline">
+                    <li class="icon-category img-circle"><img id="echange" height="35" width="35" src="../images/icon-xchange.png" style="margin-top:8px" /></li>
+                    <li class="icon-category img-circle" ><img id="roulette" height="21" width="43" src="../images/carousel-roulette.png" style="margin-top:15px"/></li>
+                    <li class="icon-category img-circle" ><img id="poker" height="34" width="36" src="../images/carousel-poker.png" style="margin-top:8px" /></li>
                 </ul>
+                <span class="more-link"><a href="#">En savoir +</a></span>
             </div>
             <div class="col-lg-5">
-                <img class="featurette-image img-responsive" data-src="holder.js/300x300/auto" alt="Generic placeholder image">
+                <img class="featurette-image img-responsive" data-src="holder.js/150x150/auto" alt="Generic placeholder image">
             </div>
         </div>
     <!-- /END THE FEATURETTES -->
     </div>
 </div><!-- /.container -->
 
+<div class="last-products">
+    <div class="container">
+        <h2>Découvrez<span style="font-size:1em;font-weight:lighter;color:#333333"> les dernières offres enregistrées</span></h2>
 
-<script src="bower_components/holderjs/holder.js"></script>
-<script src="bower_components/roundabout/jquery.roundabout.js"></script>
-<script src="bower_components/carouFredSel/jquery.carouFredSel-6.2.1.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $(".nxc-carousel").roundabout({
-            btnNext: ".next",
-            btnPrev: ".prev",
-            minScale: 0.1,
-            maxScale: 0.9
-        });
-    });
 
-    $(document).ready(function() {
-        // Using custom configuration
-        $(".last_products").carouFredSel({
-            width: 850,
-            align: "left",
-            direction: "left",
-            items: 5,
-            scroll: 1,
-            next: "#last_products_next"
-        });
-    });
-</script>
+        <div class="carousel-container">
+        <!-- Insert to your webpage where you want to display the carousel -->
+            <div class="jcarousel">
+                <div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                    <div class="jcarousel-element">
+                        <img data-src="holder.js/90x100/auto"style="opacity: 1;" alt="basketball" />
+                        <p>Lorem Ipsum</p>
+                        <p>300 pts</p>
+                        <button class="nxc-btn">Echanger</button>
+                    </div>
+                </div>
+            </div>
+            <input type="image" src="../images/product-arrowleft.png" id="last_products_prev"/>
+            <input type="image" src="../images/product-arrowright.png" id="last_products_next"/>
+        </div>
+        <!-- End of body section HTML codes -->
+
+
+
+
+
+
+
+
+        <!-- <div id="last_products">
+             <div>
+                 <img data-src="holder.js/80x90/auto"style="opacity: 1;" alt="basketball" />
+                 <p>Lorem Ipsum</p>
+                 <button class="nxc-btn">Echanger</button>
+             </div>
+             <div>
+                 <img data-src="holder.js/80x90/auto" style="opacity: 1;" alt="basketball" />
+                 <p>Dolor Sitam</p>
+                 <button class="nxc-btn">Echanger</button>
+             </div>
+             <div>
+                 <img style="opacity: 1;" data-src="holder.js/80x90/auto" alt="basketball" />
+                 <p>Lorem Ipsum</p>
+                 <button class="nxc-btn">Echanger</button>
+             </div>
+             <div>
+                 <img data-src="holder.js/80x90/auto" alt="basketball" style="opacity: 1;"/>
+                 <p>Dolor Sitam</p>
+                 <button class="nxc-btn">Echanger</button>
+             </div>
+             <div>
+                 <img data-src="holder.js/80x90/auto" alt="basketball" style="opacity: 1;"/>
+                 <p>Lorem Ipsum</p>
+                 <button class="nxc-btn">Echanger</button>
+             </div>
+             <div>
+                 <img data-src="holder.js/80x90/auto" alt="basketball" style="opacity: 1;"/>
+                 <p>Dolor Sitam</p>
+                 <button class="nxc-btn">Echanger</button>
+             </div>
+             <div>
+                 <img style="opacity: 1;" data-src="holder.js/80x90/auto" alt="basketball" />
+                 <p>Lorem Ipsum</p>
+                 <button class="nxc-btn">Echanger</button>
+             </div>
+         </div>
+         <input type="image" src="../images/product-arrowleft.png" id="last_products_prev"/>
+         <input type="image" src="../images/product-arrowright.png" id="last_products_next"/>-->
+     </div>
+ </div>
+
+ <script src="bower_components/holderjs/holder.js"></script>
+ <script src="bower_components/roundabout/jquery.roundabout.js"></script>
+<script src="bower_components/jcarousel/jquery.jcarousel.min.js"></script>
+<!-- <script src="bower_components/carouFredSel/jquery.carouFredSel-6.2.1.js"></script> -->
+
+ <script>
+     $(document).ready(function() {
+         $(".nxc-carousel").roundabout({
+             btnNext: ".next",
+             btnPrev: ".prev",
+             minScale: 0.4,
+             maxScale: 0.8,
+             minOpacity: 1.0
+         });
+
+         $("#echange").click(function() {
+             $(".nxc-carousel").roundabout("animateToChild", 0);
+             return false;
+         });
+
+         $("#roulette").click(function() {
+             $(".nxc-carousel").roundabout("animateToChild", 1);
+             return false;
+         });
+
+         $("#poker").click(function() {
+             $(".nxc-carousel").roundabout("animateToChild", 2);
+             return false;
+         });
+     });
+
+    /* $(function() {
+         var _visible = 5;
+
+         $('#last_products').carouFredSel({
+             items: _visible,
+             width: '100%',
+             auto: false,
+             scroll: {
+                 items           : 1,
+                 fx              : "scroll",
+                 duration        : 750,
+                 easing          : "linear"
+             },
+             prev: {
+                 button: '#last_products_next'
+             },
+             next: {
+                 button: '#last_products_prev'
+             }
+         });
+     });*/
+
+
+     $(function() {
+         $('.jcarousel').jcarousel({
+             // Configuration goes here
+             wrap: 'circular'
+         });
+     });
+
+     $('#last_products_prev').click(function() {
+         $('.jcarousel').jcarousel('scroll', '-=1');
+     });
+
+     $('#last_products_next').click(function() {
+         $('.jcarousel').jcarousel('scroll', '+=1');
+     });
+
+ </script>

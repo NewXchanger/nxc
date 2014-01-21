@@ -10,6 +10,10 @@ angular.module('nxc')
 
         get: function(id) {
             return $http.get('/api/products/' + id);
+        },
+        create: function(product) {
+            alert("HAHA")
+            return $http.post('/api/products/create', product)
         }
     }
 

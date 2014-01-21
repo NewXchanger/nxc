@@ -1,90 +1,130 @@
-<div class="container">
-    <!-- Summary ================================================== -->
-    <div class="row">
-        <div class="summary-results">
-            <button ng-click="goBack()">Revenir aux resultats</button>
-        </div>
-    </div>
-
-    <div class="row">
-    <!-- Left menu ================================================== -->
-        <div class="col-lg-3 col-user">
-            <div><button class="nxc-button full-button" ng-click="user_details(product)">Contacter</button></div>
-            <div style="margin-top:10px"><img style="margin-left:auto;margin-right:auto" class="placeholder" data-src="holder.js/150x150/auto" alt="Generic placeholder" /></div>
-        </div>
-
-
-        <div class="col-lg-9 grey-light">
-            <!-- Results ================================================== -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <img class="placeholder" data-src="holder.js/255x255/auto" alt="Generic placeholder" />
-                    <div class="row no-pad">
-                        <div class="col-lg-3">
-                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="placeholder" data-src="holder.js/40x40/auto" alt="Generic placeholder" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 result-detail">
-                    <h4 class="object-title">{{product.name}}</h4>
-                    <p>{{product.description}}</p>
-                </div>
+        <!-- Summary ================================================== -->
+<div class="header-product">
+    <div class="container">
+        <div class="row">
+            <button class="nxc-btn" ng-click="goBack()"><i class="fa fa-chevron-left" style="margin-right:10px"></i>Revenir aux resultats</button>
+            <div style="display:inline-block;float:right">
+                <i class="fa fa-print"></i>
+                <i class="fa fa-heart"></i>
             </div>
-
-            <div class="row grey-middle">
-                <!-- Nav tabs -->
-                <div class="col-lg-9">
-                    <ul class="nav nav-tabs">
-                        <li><a href="#received" data-toggle="tab">Offres recues</a></li>
-                        <li><a href="#sent" data-toggle="tab">Offres envoyees</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <button class="nxc-button full-button" style="vertical-align:middle;" ng-click="doOffer()">Faire une offre</button>
-                </div>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="received">
-                        <!--<div class="row">-->
-                            <div class="col-lg-6" ng-repeat="offer in refused_offers">
-
-                            </div>
-                            <div class="col-lg-6" ng-repeat="offer in product.pending_offers | limitTo:2 | orderBy:date">
-                                <div>
-                                    <div class="entete-offre">Le {{offer.date}} - <strong>{{offer.user}}</strong> souhaite</div>
-                                    <div class="corps-offre">
-                                        <div class="col-lg-3"><img class="placeholder" data-src="holder.js/40x40/auto" style="padding-top:10px;padding-bottom:10px" alt="Generic placeholder" /></div>
-                                        <div class="col-lg-6">{{offer.object}}</div>
-                                        <div class="col-lg-3"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        <!--</div>-->
-                    </div>
-
-
-                    <div class="tab-pane" id="sent">
-                        <div class="row">
-                            <div class="col-lg-6" ng-repeat="offer in pending_offers">
-                                <p>lol</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
-
     </div>
 </div>
 
+<div class="nxc-body" style="padding-top:30px">
+    <div class="container">
+
+        <div class="row">
+        <!-- Left menu ================================================== -->
+            <div class="col-lg-3">
+                <div class="col-user">
+                    <div style="margin-top:10px"><img style="margin-left:auto;margin-right:auto" class="placeholder" data-src="holder.js/120x120/auto" alt="Generic placeholder" /></div>
+                    <p><strong>Jean-Philippe Smet</strong></p>
+                    <p><i class="fa fa-star"></i> 100% d'évaluations positives</p>
+                    <p><i class="fa fa-gavel"></i> Trocs effectués : 42</p>
+                    <p><i class="fa fa-clock-o"></i> Inscrit depuis le : </p>
+                    <p><i class="fa fa-map-marker"></i> Paris, Ile-de-France</p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-9" style="margin-bottom: 30px;">
+                <!-- Results ================================================== -->
+                <div class="row result-detail">
+                    <div class="col-lg-4">
+
+                        <div class="stage">
+                            <div class="jcarousel carousel-stage">
+                                <ul>
+                                    <li ng-repeat="photo in product.photos"><img src="../images/{{photo}}"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="carnavigation">
+                            <div class="jcarousel carousel-navigation">
+                                <ul>
+                                    <li ng-repeat="photo in product.photos"><img src="../images/{{photo}}" width="50" height="50"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <h4 class="object-title">{{product.name}}</h4>
+                        <p>{{product.desc}}</p>
+                        <p><i class="fa fa-tag"></i> Tags/catégories</p>
+                        <p><i class="fa fa-map-marker"></i> {{product.loc}}</p>
+                        <p><i class="fa fa-thumbs-up"></i> <strong>Préférences d'échange :</strong> {{product.wants}}</p>
+                        <p><span class="special-desc">{{product.nxc}} pts</span></p>
+                        <p><i class="fa fa-clock-o"></i> Depuis le : <span class="special-desc">{{product.since}}</span></p>
+                    </div>
+                </div>
+
+        <div class="row">
+            <!-- Nav tabs -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <ul class="nav nav-tabs" id="nav-product">
+                        <li></i> <a href="#received" data-toggle="tab"><i class="fa fa-download" style="margin-right:5px"></i>Offres recues</a></li>
+                        <li><a href="#sent" data-toggle="tab"><i class="fa fa-upload" style="margin-right:5px"></i>Offres envoyees</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <button class="nxc-btn btn-orange" ng-click="doOffer()">Faire une offre</button>
+            </div>
+        </div>
+            <!-- Tab panes -->
+        <div class="row">
+            <div class="tab-content product-tabs">
+                <div class="tab-pane active" id="received">
+                    <!--<div class="row">-->
+                        <div class="col-lg-6" ng-repeat="offer in refused_offers">
+
+                        </div>
+                        <div class="col-lg-6" ng-repeat="offer in product.pending_offers | limitTo:2 | orderBy:date">
+                            <div>
+                                <div class="entete-offre"><i>Le {{offer.date}}</i> - <strong>{{offer.user}}</strong> souhaite</div>
+                                <div class="corps-offre">
+                                    <div class="col-lg-3"><img class="placeholder" data-src="holder.js/40x40/auto" style="padding-top:10px;padding-bottom:10px" alt="Generic placeholder" /></div>
+                                    <div class="col-lg-6">{{offer.object}}</div>
+                                    <div class="col-lg-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--</div>-->
+                </div>
+
+
+                <div class="tab-pane" id="sent">
+                    <div class="row">
+                        <div class="col-lg-6" ng-repeat="offer in pending_offers">
+                            <p>lol</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+</div>
+
 <script src="bower_components/holderjs/holder.js"></script>
+<script src="bower_components/jcarousel/jquery.jcarousel.min.js"></script>
+
+<script>
+    $(function() {
+        $('.jcarousel').jcarousel({
+            // Configuration goes here
+            wrap: 'circular'
+        });
+    });
+
+    $('#nav-product a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>

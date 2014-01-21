@@ -1,25 +1,86 @@
-{
-    "name": "iphone noir 2",
-    "description": "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.",
-    "wants": [  "iPhone 5S" ],
-    "photos": [ "iphoneblack.jpg" ],
-    "pending_offers": [
-        {
-            "date": "12/12/2014 a 12h",
-            "user": "Lorem Ipsum",
-            "points": 300,
-            "object": "Nokia 3310"
-        },
-        {
-            "date": "16/12/2014 a 12h",
-            "user": "Dolorsit amet",
-            "object": "Galaxy SIII"
-        },
-        {
-            "date": "10/12/2014 a 12h",
-            "user": "John Smith",
-            "object": "Galaxy SII",
-            "points": 20
-        }
-    ]
-}
+[
+    {
+        "name": "iphone noir 2",
+        "desc": "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.",
+        "wants": [  "iPhone 5S" ],
+        "photos": [ "iphoneblack.jpg", "iphoneblack2.jpg", "iphoneblack3.jpg", "iphoneblack4.jpg" ],
+        "loc": "Paris",
+        "since": "01-02-2013",
+        "nxc": "12000",
+        "pending_offers": [
+            {
+                "date": "12/12/2014 a 12h",
+                "user": "Lorem Ipsum",
+                "points": 300,
+                "object": "Nokia 3310"
+            },
+            {
+                "date": "16/12/2014 a 12h",
+                "user": "Dolorsit amet",
+                "object": "Galaxy SIII"
+            },
+            {
+                "date": "10/12/2014 a 12h",
+                "user": "John Smith",
+                "object": "Galaxy SII",
+                "points": 20
+            }
+        ]
+    },
+    {
+        "name": "iphone Blanc",
+        "desc": "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.",
+        "wants": [  "Samsung Galaxy SIV", "Nokia 3310" ],
+        "photos": [ "iphonewhite.jpg", "iphonewhite2.jpg", "iphonewhite3.jpg", "iphonewhite4.jpg" ],
+        "loc": "Paris, Ile de France",
+        "since": "01-02-2013",
+        "nxc": "15000",
+        "pending_offers": [
+            {
+                "date": "12/12/2014 a 12h",
+                "user": "Lorem Ipsum",
+                "points": 300,
+                "object": "Nokia 3310"
+            },
+            {
+                "date": "16/12/2014 a 12h",
+                "user": "Dolorsit amet",
+                "object": "Galaxy SIII"
+            },
+            {
+                "date": "10/12/2014 a 12h",
+                "user": "John Smith",
+                "object": "Galaxy SII",
+                "points": 20
+            }
+        ]
+    },
+    {
+        "name": "ipad",
+        "desc": "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.",
+        "wants": [  "Nexus 10", "Galaxy Tab" ],
+        "photos": [ "ipad.jpg", "ipad2.jpg", "ipad3.jpg", "ipad4.jpg" ],
+        "loc": "Brest, Bretagne",
+        "since": "01-02-2014",
+        "nxc": "34000",
+        "pending_offers": [
+            {
+                "date": "12/12/2014 a 12h",
+                "user": "Lorem Ipsum",
+                "points": 300,
+                "object": "Nokia 3310"
+            },
+            {
+                "date": "16/12/2014 a 12h",
+                "user": "Dolorsit amet",
+                "object": "Galaxy SIII"
+            },
+            {
+                "date": "10/12/2014 a 12h",
+                "user": "John Smith",
+                "object": "Galaxy SII",
+                "points": 20
+            }
+        ]
+    }
+]

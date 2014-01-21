@@ -3,10 +3,13 @@
 angular.module('nxc')
     .controller('MainCtrl', [ "$scope", "$location",  "$modal", "MainService", function ($scope, $location, $modal, MainService) {
 
-        $scope.add_product = function () {
-            if ($scope.iwant && $scope.ihave) {
-                $location.path("/results/" + $scope.iwant + "/" + $scope.ihave + "/");
-            }
+        $scope.iwant = function () {
+            $location.path("/results/want/" + $scope.myObject + "/");
+        }
+
+
+        $scope.ihave = function () {
+            $location.path("/results/have/" + $scope.myObject + "/");
         }
 
         $scope.user = {

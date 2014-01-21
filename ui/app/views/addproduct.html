@@ -1,72 +1,31 @@
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>Proposer un echange</h3>
+<div class="container">
+    <div style="margin-left:auto;margin-right:auto;margin-top:50px;margin-bottom:50px;display:inline-block">
+
+        <label>Nom du produit:</label>
+        <input type="text" ng-model="product.name" required/> <br><br>
+
+        <label>Description:</label>
+        <input type="text" ng-model="product.desc" required/><br><br>
+
+        <label>Points:</label>
+        <input type="text" ng-model="product.nxc" required/><br><br>
+
+
+        <label>Préférences d'échange:</label>
+        [ <a href="" ng-click="addWant()">add</a> ]
+        <div ng-repeat="want in product.wants track by $index">
+            <input type="text" ng-model="want" ng-change="change(want, $index)" required>
+            [ <a href="" ng-click="removeWant($index)">X</a> ]
+        </div><br><br>
+
+        <input type="file" ng-file-select="onFileSelect($files)"><br><br>
+        <div ng-repeat="photo in photos track by $index">
+            {{photo}}<br>
         </div>
-        <form ng-submit="submit()">
 
+        <button class="nxc-btn" ng-click="saveProduct()">Enregistrer son produit</button>
 
-            <div class="modal-body">
-
-                <div class="row">
-                    <div class="col-lg-10" style="margin-bottom:20px">
-                        <div id="LOL" class="last_products">
-                            <img data-src="holder.js/50x80/auto" alt="basketball" />
-                            <img data-src="holder.js/50x80/auto" id="img2" alt="basketball" />
-                            <img data-src="holder.js/50x80/auto" id="img3" alt="basketball" />
-                            <img data-src="holder.js/50x80/auto" id="img4" alt="basketball" />
-                            <img data-src="holder.js/50x80/auto" id="img5" alt="basketball" />
-                            <img data-src="holder.js/50x80/auto" id="img6" alt="basketball" />
-                            <img data-src="holder.js/50x80/auto" id="img7" alt="basketball" />
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <input type="image" src="../images/chevron-right.jpg" name="image" id="last_products_next" height="50" style="float:right;position:absolute;"/>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3"/>
-                    <div class="col-lg-6">
-                        <input type="text" ng-model="offeredpoints" />
-                        <img />
-                        <span>= {{totalpoints}}</span>
-                    </div>
-                    <div class="col-lg-3"/>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                <input type="submit" class="btn primary-btn" value="Submit" />
-            </div>
-        </form>
+        <!--<pre>ITEM: {{product | json}}</pre>-->
     </div>
 </div>
 
-
-<script src="bower_components/carouFredSel/jquery.carouFredSel-6.2.1.js"></script>
-<script src="bower_components/holderjs/holder.js"></script>
-<script src="scripts/controllers/addProduct.js"></script>
-
-<script>
-
-        $(document).ready(function() {
-    // Using custom configuration
-    $(".last_products").carouFredSel({
-        width: 350,
-        align: "left",
-        direction: "left",
-        items: 5,
-        scroll: 1,
-        next: "#last_products_next"
-    });
-
-            $(".last_products").click(function() {
-                alert($(this).attr('id'));
-                var scope = angular.element('div').scope();
-                scope.totalpoints = $(this).attr('id');
-            });
-});
-
-</script>

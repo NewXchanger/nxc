@@ -1,0 +1,41 @@
+.tab-pane > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.results-details:hover {
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+
+.results-details {
+    margin-top: 30px;
+    background-color: #ffffff;
+    color: #8b8b8b;
+    cursor: pointer;
+}
+
+.summary-results {
+    background-color: #2d3e50;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.product-desc > p  {
+    font-size: 13px;
+}
+
+.search-categories {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #ffffff;
+    height: 400px;
+}
+
+.search-tab {
+    color: #8b8b8b;
+}

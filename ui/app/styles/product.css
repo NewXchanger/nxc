@@ -1,0 +1,66 @@
+.col-user {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.header-product {
+    padding-top: 5px;
+    height: 4em;
+}
+
+.header-product, .product-tabs > .active {
+    background-color: #f0f0f0 !important;
+}
+
+.result-detail, .result-picture {
+    height: 100%;
+    padding: 10px;
+}
+
+.result-picture, .result-detail {
+    background-color: #ffffff;
+}
+
+.stage {
+    width: 240px;
+    position: relative;
+}
+
+.carousel-stage {
+    height: 240px;
+}
+
+#nav-product > li {
+    background-color: #e5e5e5;
+    font-weight: bold;
+}
+
+#nav-product  a {
+    color: #c5c3c4 !important;
+}
+
+#nav-product > .active,{
+    color: #9a9a9a !important;
+    background-color: #ececec !important;
+}
+
+
+#nav-product > .active i {
+    color: #46dcea;
+}
+
+.entete-offre {
+    color: #ffffff;
+    background-color: #2d3e50;
+    height: 30px;
+}
+
+.special-desc {
+    color: #46dcea;
+    font-weight: bold;
+}
+
+.carousel-navigation {
+
+}

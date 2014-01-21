@@ -11,7 +11,7 @@ angular.module('nxc')
 
         MainService.get($routeParams.id).success(function(data, status, headers, config){
             $scope.product = data[0];
-            console.log($scope.product.pending_offers)
+            console.log($scope.product.photos)
         });
 
         $scope.goBack = function() {

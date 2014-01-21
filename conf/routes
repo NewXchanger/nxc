@@ -8,7 +8,9 @@ GET        /                              controllers.Application.index
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file                  controllers.Assets.at(path="/public", file)
 
-GET         /api/search/:iwant/:ihave        controllers.Search.fromIndex(iwant: String, ihave: String)
+GET         /api/search/want/:iwant        controllers.Search.want(iwant: String)
+
+GET         /api/search/have/:ihave        controllers.Search.have(ihave: String)
 
 GET         /api/products                  controllers.Product.getAll()
 
@@ -16,4 +18,10 @@ GET         /api/products/:id               controllers.Product.getById(id: Stri
 
 POST        /api/products/:id/offer/:user/:points         controllers.Product.makeOffer(id: String, user: String, points: Int)
 
+GET         /api/regions                    controllers.Repository.getAllRegions()
+
 GET        /*file                         controllers.Application.at(file)
+
+POST        /api/products/create            controllers.Product.createProduct()
+
+POST        /api/upload/photo           controllers.Upload.uploadPhoto()

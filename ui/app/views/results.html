@@ -1,48 +1,98 @@
-<div class="container">
+<div class="nxc-body" style="padding-top:30px">
+    <div class="container">
 
-    <div class="col-lg-3">
+        <div class="row">
 
-        <ul class="nav nav-tabs">
-            <li><a href="#iwant" data-toggle="tab">Je recherche</a></li>
-            <li><a href="#ihave" data-toggle="tab">Je possede</a></li>
-        </ul>
+            <div class="col-lg-3" style="margin-top:30px">
+                <ul id="searchTab" class="nav nav-tabs">
+                    <li><a href="#iwant" data-toggle="tab">Je recherche</a></li>
+                    <li><a href="#ihave" data-toggle="tab">Je possede</a></li>
+                </ul>
 
-        <div class="tab-content">
-            <div class="tab-pane active" id="iwant">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="iwant">
+                        <div class="select-style" style="margin-left:auto;margin-right:auto">
+                            <select ng-repeat="category in categories">
+                                <option value="{{category}}">{{category}}</option>
+                            </select>
+                        </div>
+
+                        <input class="search-input" type=text placeholder="ex : iPhone, table..." ng-model="myObject" style="display:block; margin-left:auto; margin-right:auto;margin-bottom:1em;height:2.5em;width:15em"/>
+
+                        <hr style="width:15em">
+
+                        <div class="select-style" style="margin-left:auto;margin-right:auto">
+                            <select ng-model="region" ng-options="r.name for r in regions">
+                            </select>
+                        </div>
+
+                        <input class="search-input" type=text placeholder="Code postal, Ville" ng-model="myObject" style="display:block; margin-left:auto; margin-right:auto;margin-bottom:1em;height:2.5em;width:15em"/>
+                    </div>
+
+                    <div class="tab-pane" id="ihave">
+                        <p>LOL</p>
+                    </div>
+                </div>
+
+                <div style="display:inline-block; width:100%;background-color:#3f556c;text-align:center;height:100px">
+                    <button class="nxc-btn btn-orange" style="margin-right:auto;margin-left:auto;margin-top:25px">Chercher<i class="fa fa-search" style="margin-left:10px"></i></button>
+                </div>
+
+                <div class="search-categories">
+                    <h4>Catégories</h4>
+                </div>
+
+
             </div>
 
-            <div class="tab-pane" id="ihave">
-            </div>
-        </div>
-    </div>
+
+            <div class="col-lg-9" ng-model="products">
+                <!-- Summary ================================================== -->
+                <div class="row summary-results">
+                    <i class="fa fa-search" style="margin-right:10px"></i><span>{{products.length}} offre(s) pour "iPhone"</span>
+                    <div style="display:inline-block; float:right">
+                        <span>Classement par</span>
+                        <div class="select-style" style="display:inline-block">
+                            <select ng-model="orderProp">
+                                <option value="name">Nom</option>
+                                <option value="age">Pertinence</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
 
-    <div class="col-lg-9" ng-model="products">
-        <!-- Summary ================================================== -->
-        <div class="summary-results">
-            <span>{{products.length}} offres pour "iPhone"</span>
-            <select class="filter-results" ng-model="orderProp">
-                <option value="name">Nom</option>
-                <option value="age">Pertinence</option>
-            </select>
-            <span style="float:right;">Classement par</span>
-        </div>
-
-
-        <!-- Results ================================================== -->
-        <div class="row details" ng-repeat="product in products" ng-click="product_details(product)">
-            <div class="col-lg-2">
-                <img height="120" weight="140" ng-src="../images/{{product.photos[0]}}" />
-            </div>
-            <div class="col-lg-7 result-detail">
-                <h4>{{product.name}}</h4>
-                <p>{{product.description | limitTo:2}}</p>
-            </div>
-            <div class="col-lg-3 result-preferences">
-                Préférences d'échange: {{ product.wants }}
+                <!-- Results ================================================== -->
+                <div class="row results-details" ng-repeat="product in products" ng-click="product_details(product)">
+                    <div class="col-lg-3 result-picture">
+                        <div class="row">
+                            <img height="120" width="140" ng-src="../images/{{product.photos[0]}}" />
+                        </div>
+                    </div>
+                    <div class="col-lg-9 result-detail">
+                        <div class="row">
+                            <h4>{{product.name}}</h4>
+                            <p>{{product.desc | limitTo:140}}...</p>
+                            <span class="product-desc">
+                                <p><i class="fa fa-tag" style="margin-right:5px"></i> Tags/catégories</p>
+                                <p><i class="fa fa-map-marker" style="margin-right:5px"></i> {{product.loc}}</p>
+                                <p><i class="fa fa-thumbs-up" style="margin-right:5px"></i> Préférences d'échange : {{product.wants}}</p>
+                                <p>{{product.nxc}} pts</p>
+                                <p><i class="fa fa-clock-o" style="margin-right:5px"></i> Depuis le : {{product.since}}</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<script src="bower_components/holderjs/holder.js"></script>
+    <script src="bower_components/holderjs/holder.js"></script>
+    <script>
+        $('#searchTab a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+</div>

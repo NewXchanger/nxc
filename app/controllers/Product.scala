@@ -1,16 +1,17 @@
 package controllers
 
 import play.modules.reactivemongo.MongoController
-import play.api.mvc.{Action, Controller}
+import play.api.mvc.{AnyContent, Action, Controller}
 import reactivemongo.api.collections.default.BSONCollection
 import reactivemongo.bson.{BSONObjectID, BSONRegex, BSONDocument}
 import scala.concurrent.Future
-import play.api.libs.json.Json
+import play.api.libs.json.{JsObject, JsValue, Json}
 
 import play.modules.reactivemongo.json.BSONFormats._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import models._
+import play.modules.reactivemongo.json.collection.JSONCollection
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,32 +22,43 @@ import models._
  */
 object Product extends Controller with MongoController {
 
-  val collection = db[BSONCollection]("products")
+  val collection = db[JSONCollection]("products")
 
   def getAll() = Action.async {
 
     val query = BSONDocument()
-    val cursor = collection.find(query).cursor[BSONDocument]
-    val futureList: Future[List[BSONDocument]] = cursor.collect[List](10, true)
+    val cursor = collection.find(query).cursor[JsObject]
+    val futureList: Future[List[JsObject]] = cursor.collect[List]()
 
-    futureList.map { list => Ok(Json.toJson(list.toSeq)) }
+    futureList.map { list => Ok(Json.arr(list)) }
   }
 
   def getById(id: String) = Action.async {
-    val objectId = new BSONObjectID(id)
-    val cursor = collection.find(BSONDocument("_id" -> objectId)).cursor[BSONDocument]
 
-    val futureList: Future[List[BSONDocument]] = cursor.collect[List](10, true)
+    val objectId = BSONObjectID.apply(id)
+    val cursor = collection.find(Json.obj("_id"  -> Json.toJson(objectId))).cursor[JsObject]
 
-    futureList.map { list => Ok(Json.toJson(list.toSeq)) }
+    val futureList: Future[List[JsObject]] = cursor.collect[List]()
+
+    futureList.map { list => Ok(Json.toJson(list)) }
   }
 
   def makeOffer(id: String, user: String, points: Int) = Action.async {
     val query = BSONDocument()
-    val cursor = collection.find(query).cursor[BSONDocument]
-    val futureList: Future[List[BSONDocument]] = cursor.collect[List](10, true)
+    val cursor = collection.find(query).cursor[JsObject]
+    val futureList: Future[List[JsObject]] = cursor.collect[List]()
 
-    futureList.map { list => Ok(Json.toJson(list.toSeq)) }
+    futureList.map { list => Ok(Json.arr(list)) }
+  }
+
+  def createProduct() = Action.async(parse.json) { request =>
+
+    Console.println("LOLOL" + request.body)
+
+    val futureResult = collection.insert(request.body)
+
+    futureResult.map ( x => Ok(""))
+
   }
 
 }

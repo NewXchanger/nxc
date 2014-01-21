@@ -4,7 +4,7 @@ import play.api.mvc.{Action, Controller}
 import play.modules.reactivemongo.MongoController
 
 import reactivemongo.api.collections.default.BSONCollection
-import reactivemongo.bson.{BSONObjectID, BSONRegex, BSONDocument}
+import reactivemongo.bson.{BSONString, BSONObjectID, BSONRegex, BSONDocument}
 
 import scala.concurrent.Future
 
@@ -26,9 +26,22 @@ object Search extends Controller with MongoController {
 
   val collection = db[BSONCollection]("products")
 
-  def fromIndex(want: String, have: String) = Action.async {
+  def want(want: String) = Action.async {
 
     val query = BSONDocument("name" -> BSONRegex(want + ".*", "" ))
+    val cursor = collection.find(query).cursor[BSONDocument]
+
+    val futureList: Future[List[BSONDocument]] = cursor.collect[List](10, true)
+
+    //val jsonTransformer = __.json.update( (__ \ 'id).json.copyFrom( (__ \ '_id \ '$oid).json.pick ) )
+
+    futureList.map { list => Ok(Json.toJson(list.toSeq)) }
+
+  }
+
+  def have(have: String) = Action.async {
+
+    val query = BSONDocument("wants" -> BSONString("$elemMatch : { " + have + "}"))
     val cursor = collection.find(query).cursor[BSONDocument]
 
     val futureList: Future[List[BSONDocument]] = cursor.collect[List](10, true)
