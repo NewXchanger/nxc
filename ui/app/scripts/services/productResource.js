@@ -8,7 +8,9 @@
 
 'use strict';
 
-angular.module('productService', ['ngResource']).
-    factory('products', function ($resource) {
-        return $resource('api/product/:id');
-    });
+function products($resource) {
+    return $resource('api/product/:id');
+}
+
+angular.module('nxc', ['ngResource']).
+    factory('products', products);

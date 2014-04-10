@@ -4,13 +4,15 @@
 
 'use strict';
 
-angular.module('nxc')
-    .service('RepositoryService', ['$q', '$http', function($q, $http) {
+function RepositoryService ($q, $http) {
 
-        return {
-            getRegions: function() {
-                return $http.get('/api/regions');
-            }
+    return {
+        getRegions: function () {
+            return $http.get('/api/regions');
         }
+    };
 
-}]);
+}
+
+angular.module('nxc')
+    .service('RepositoryService', ['$q', '$http', RepositoryService]);

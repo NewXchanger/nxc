@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('nxc')
-    .service('MainService', ['$q', '$http', function($q, $http) {
+function MainService($q, $http) {
 
     return {
         search: function(want, have) {
@@ -12,9 +11,11 @@ angular.module('nxc')
             return $http.get('/api/products/' + id);
         },
         create: function(product) {
-            alert("HAHA")
-            return $http.post('/api/products/create', product)
+            return $http.post('/api/products/create', product);
         }
-    }
+    };
 
-}]);
+}
+
+angular.module('nxc')
+    .service('MainService', ['$q', '$http', MainService]);

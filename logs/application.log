@@ -1,0 +1,92 @@
+2014-02-17 22:09:47,386 - [INFO] - from play in pool-4-thread-4 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-02-17 22:09:52,374 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2014-02-17 22:09:52,382 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'nxc'! Servers:
+		[localhost:27017]
+
+2014-02-17 22:09:52,387 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-02-17 22:09:52,571 - [INFO] - from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-2 
+Slf4jLogger started
+
+2014-02-18 20:27:05,883 - [INFO] - from application in main 
+ReactiveMongoPlugin starting...
+
+2014-02-18 20:27:05,920 - [INFO] - from application in main 
+ReactiveMongoPlugin successfully started with db 'nxc'! Servers:
+		[localhost:27017]
+
+2014-02-18 20:27:05,927 - [INFO] - from play in main 
+Application started (Prod)
+
+2014-02-18 20:27:06,063 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-04-08 21:33:26,229 - [INFO] - from application in main 
+ReactiveMongoPlugin starting...
+
+2014-04-08 21:33:26,254 - [INFO] - from application in main 
+ReactiveMongoPlugin successfully started with db 'nxc'! Servers:
+		[localhost:27017]
+
+2014-04-08 21:33:26,260 - [INFO] - from play in main 
+Application started (Prod)
+
+2014-04-08 21:33:26,372 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-04-08 21:34:38,534 - [INFO] - from application in Thread-2 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-04-08 21:34:38,670 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-04-08 21:46:47,710 - [INFO] - from application in main 
+ReactiveMongoPlugin starting...
+
+2014-04-08 21:46:47,744 - [INFO] - from application in main 
+ReactiveMongoPlugin successfully started with db 'nxc'! Servers:
+		[localhost:27017]
+
+2014-04-08 21:46:47,754 - [INFO] - from play in main 
+Application started (Prod)
+
+2014-04-08 21:46:47,908 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-04-08 21:57:22,767 - [INFO] - from application in Thread-2 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-04-08 21:57:22,944 - [ERROR] - from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 
+(State: Closing) UNHANDLED MESSAGE: ChannelConnected(-390143930)
+
+2014-04-08 21:57:22,952 - [INFO] - from application in ForkJoinPool-1-worker-13 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-04-08 23:36:50,721 - [INFO] - from application in main 
+ReactiveMongoPlugin starting...
+
+2014-04-08 23:36:50,750 - [INFO] - from application in main 
+ReactiveMongoPlugin successfully started with db 'nxc'! Servers:
+		[localhost:27017]
+
+2014-04-08 23:36:50,757 - [INFO] - from play in main 
+Application started (Prod)
+
+2014-04-08 23:36:50,854 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-04-10 23:57:05,668 - [INFO] - from application in Thread-2 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-04-10 23:57:06,018 - [ERROR] - from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 
+(State: Closing) UNHANDLED MESSAGE: ChannelConnected(272548075)
+
+2014-04-10 23:57:06,032 - [INFO] - from application in ForkJoinPool-1-worker-13 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
